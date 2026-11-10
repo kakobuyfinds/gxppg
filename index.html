@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#f8f2e8">
+  <title>MyCNBox spreadsheet | Produktlänkar, mått och QC-bilder</title>
+  <meta name="description" content="MyCNBox spreadsheet på svenska. Bläddra bland tio kategorier och jämför produktlänkar, storlekar, QC-bilder och frakt till Sverige.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:title" content="MyCNBox spreadsheet | Produktlänkar, mått och QC-bilder">
+  <meta property="og:description" content="En svensk guide till produktlänkar, storlekar, lagerbilder och frakt till Sverige.">
+  <meta property="og:image" content="https://static.nike.com/a/images/t_default/f_auto,q_auto:eco,w_750/f888b4a3-a02a-420d-93e3-cb33c3bb30ac/AIR%2BFORCE%2B1%2B%2707.png">
+  <meta property="og:image:alt" content="Vit Nike Air Force 1 ’07 i sidoprofil">
+  <link rel="preconnect" href="https://static.nike.com">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23692130'/%3E%3Cpath d='M8 8v16m16-16v16M8 16h16' stroke='%23fff5e9' stroke-width='3'/%3E%3C/svg%3E">
+  <!-- Sökunderlag: Bing visade inga resultat för den exakta sökningen vid kontrollen. Tio relevanta webbplatser från annan webbsökning låg till grund för ämnesvalet, utan verifierad Bing-rankning.
+       Kategorier: mycnbox.org, mycnboxspreadsheet.com, spreadsheet-mycnbox.com.
+       Produktlänkar: mycnboxfindx.com/faq/, usfansyupoo.com/agents/mycnbox/, mycnboxlinks.com.
+       Lagerkontroll och frakt: mycnbox.net, kakous.net/mycnbox-spreadsheet, kakobuysneakers.net/mycnbox-spreadsheet, mycnboxs.com. -->
+  <style>
+    :root{color-scheme:light;--paper:#f8f2e8;--cream:#fffaf3;--ink:#281d19;--muted:#5f4a42;--wine:#692130;--peach:#f2d1be;--rule:#cdb9ac}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2,h3{line-height:1.1;text-wrap:balance}
+    h1,h2{font-family:Georgia,"Times New Roman",serif}
+    h1{font-size:clamp(2.6rem,6.5vw,5.8rem);letter-spacing:-.055em;overflow-wrap:anywhere}
+    h2{font-size:clamp(1.95rem,4.2vw,3rem);letter-spacing:-.035em}
+    h3{font-size:1.2rem}
+    p{max-width:70ch}
+    a{color:inherit;text-underline-offset:.2em}
+    a:focus-visible,summary:focus-visible{outline:3px solid currentColor;outline-offset:4px}
+    img{display:block;width:100%;height:auto}
+    .wrap{width:min(70rem,calc(100% - 2rem));margin-inline:auto}
+    .mast,.foot{background:var(--wine);color:var(--cream)}
+    .mast .wrap,.foot .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.4rem 1rem;padding-block:.75rem}
+    .brand{font-weight:800}
+    .tag,.num{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .hero{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(0,1fr);gap:clamp(1rem,4vw,3.5rem);align-items:center;padding-block:clamp(1.7rem,4vw,3.4rem)}
+    .hero .tag,.section-tag{color:var(--wine)}
+    .hero h1{margin:.35rem 0 .75rem}
+    .intro{font-size:clamp(1rem,2vw,1.16rem)}
+    .button{display:inline-block;margin-top:1rem;padding:.65rem .95rem;background:var(--wine);color:var(--cream);font-weight:750;text-decoration:none}
+    .button:hover{text-decoration:underline}
+    .hero-shot{background:var(--peach);border:1px solid var(--rule)}
+    .hero-shot img{aspect-ratio:5/3;object-fit:cover;object-position:50% 53%}
+    figcaption{padding:.55rem .7rem;font-size:.85rem}
+    .directory{border-block:1px solid var(--rule);background:var(--cream);padding-block:1.25rem}
+    .directory h2{font-size:1.65rem}
+    .directory ul{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));list-style:none;gap:1px;margin:.65rem 0 0;padding:1px;background:var(--rule)}
+    .directory a{display:flex;align-items:center;gap:.5rem;min-height:3rem;height:100%;background:var(--cream);padding:.45rem .55rem;font-weight:700;text-decoration:none}
+    .directory a:hover{background:var(--peach);text-decoration:underline}
+    .directory .num{color:var(--wine)}
+    .section{padding-block:clamp(1.8rem,4.8vw,3.9rem)}
+    .section h2{margin:.28rem 0 .65rem}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin-top:1rem}
+    .gallery figure{border:1px solid var(--rule);background:var(--cream)}
+    .gallery img{aspect-ratio:4/3;object-fit:contain;background:#fff}
+    .gallery strong{display:block}
+    .guide{background:var(--cream);border-block:1px solid var(--rule)}
+    .notes{margin-top:1rem;border-top:1px solid var(--rule)}
+    .notes article{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:.5rem 1.4rem;padding:.95rem 0;border-bottom:1px solid var(--rule)}
+    .notes p+p{margin-top:.45rem}
+    .faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:1rem 2rem}
+    .faq p{color:var(--muted)}
+    details{border-bottom:1px solid var(--rule)}
+    details:first-child{border-top:1px solid var(--rule)}
+    details p{padding:0 0 .75rem}
+    summary{cursor:pointer;padding:.7rem 0;font-weight:750}
+    .foot .wrap{align-items:baseline}
+    .foot p{font-size:.875rem}
+    @media(max-width:54rem){.directory ul{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:42rem){.hero,.notes article,.faq{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.directory ul{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-shot img{max-height:17rem}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "MyCNBox spreadsheet | Produktlänkar, mått och QC-bilder",
+        "description": "MyCNBox spreadsheet på svenska. Bläddra bland tio kategorier och jämför produktlänkar, storlekar, QC-bilder och frakt till Sverige.",
+        "inLanguage": "sv",
+        "about": {"@type": "Thing", "name": "MyCNBox spreadsheet"}
+      },
+      {
+        "@type": "FAQPage",
+        "name": "Vanliga frågor",
+        "inLanguage": "sv",
+        "mainEntity": [
+          {"@type":"Question","name":"Vad är ett MyCNBox spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Det är en kategoriserad samling produktreferenser för dig som jämför varor inför köp. Den här guiden är en webbsida med kategorilänkar till HipobuyFind."}},
+          {"@type":"Question","name":"Hur ser jag om en produktlänk fortfarande gäller?","acceptedAnswer":{"@type":"Answer","text":"Öppna originalannonsen och kontrollera artikelnumret, säljarens namn och om den valda storleken och färgen fortfarande går att välja."}},
+          {"@type":"Question","name":"Vad visar QC-bilder från lagret?","acceptedAnswer":{"@type":"Answer","text":"De visar synliga detaljer på varan som kommit till lagret, till exempel färg, sömmar och märkning. Be om en närbild eller ett måttfoto om en viktig detalj saknas."}},
+          {"@type":"Question","name":"Hur uppskattar jag frakten till Sverige?","acceptedAnswer":{"@type":"Answer","text":"Be om en offert för ditt svenska postnummer och jämför den debiterbara vikten, vad fraktpriset omfattar och om försändelsen kan spåras."}},
+          {"@type":"Question","name":"Var leder kategorilänkarna?","acceptedAnswer":{"@type":"Answer","text":"Varje kategorilänk öppnar motsvarande kategori hos HipobuyFind. Guiden publiceras fristående från MyCNBox."}}
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/gxppg/">
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap">
+      <a class="brand" href="https://www.hipobuyfind.com">www.hipobuyfind.com</a>
+      <span class="tag">Svensk köpguide</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" aria-labelledby="sidrubrik">
+      <div>
+        <p class="tag">Produktlänkar och köpbeslut</p>
+        <h1 id="sidrubrik">MyCNBox spreadsheet</h1>
+        <p class="intro">Ett MyCNBox spreadsheet samlar produktreferenser som du kan jämföra inför ett köp. Börja i rätt kategori, spara säljarens artikelnummer och bestäm vilka mått eller lagerbilder du vill se innan du går vidare.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Öppna HipobuyFind</a>
+      </div>
+      <figure class="hero-shot">
+        <img src="https://static.nike.com/a/images/t_default/f_auto,q_auto:eco,w_750/f888b4a3-a02a-420d-93e3-cb33c3bb30ac/AIR%2BFORCE%2B1%2B%2707.png"
+          srcset="https://static.nike.com/a/images/t_default/f_auto,q_auto:eco,w_400/f888b4a3-a02a-420d-93e3-cb33c3bb30ac/AIR%2BFORCE%2B1%2B%2707.png 400w, https://static.nike.com/a/images/t_default/f_auto,q_auto:eco,w_750/f888b4a3-a02a-420d-93e3-cb33c3bb30ac/AIR%2BFORCE%2B1%2B%2707.png 750w"
+          sizes="(max-width: 42rem) calc(100vw - 2rem), (max-width: 72rem) 43vw, 29rem"
+          width="750" height="750" loading="eager" fetchpriority="high" alt="Vit Nike Air Force 1 ’07 i sidoprofil med vit Swoosh">
+        <figcaption>Bildexempel. En sidobild visar skons profil och sulans form.</figcaption>
+      </figure>
+    </section>
+
+    <nav class="directory" aria-labelledby="kategorier">
+      <div class="wrap">
+        <h2 id="kategorier">Hitta rätt kategori</h2>
+        <ul>
+          <li><a href="https://hipobuyfind.com/category-911-Shoes.html"><span class="num" aria-hidden="true">01</span>Skor</a></li>
+          <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html"><span class="num" aria-hidden="true">02</span>Huvtröjor och tröjor</a></li>
+          <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html"><span class="num" aria-hidden="true">03</span>T-shirts</a></li>
+          <li><a href="https://hipobuyfind.com/category-914-Jackets.html"><span class="num" aria-hidden="true">04</span>Jackor</a></li>
+          <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html"><span class="num" aria-hidden="true">05</span>Byxor och shorts</a></li>
+          <li><a href="https://hipobuyfind.com/category-916-Headwear.html"><span class="num" aria-hidden="true">06</span>Huvudbonader</a></li>
+          <li><a href="https://hipobuyfind.com/category-917-Sets.html"><span class="num" aria-hidden="true">07</span>Matchande set</a></li>
+          <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html"><span class="num" aria-hidden="true">08</span>Underkläder</a></li>
+          <li><a href="https://hipobuyfind.com/category-919-Jersey.html"><span class="num" aria-hidden="true">09</span>Matchtröjor</a></li>
+          <li><a href="https://hipobuyfind.com/category-920-Accessories.html"><span class="num" aria-hidden="true">10</span>Accessoarer</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="section wrap" aria-labelledby="bildguide">
+      <p class="tag section-tag">Bildguide</p>
+      <h2 id="bildguide">Vilken detalj vill du se närmare?</h2>
+      <p>Bilderna visar exempel på märkesprodukter. Använd dem för att välja vilka vinklar och mått du vill se i annonsen du jämför.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/943C449A4462C595_E01-2?%24default_GH%24=&amp;crop=381%2C162%2C1243%2C1677&amp;hei=520&amp;wid=420&amp;qlt=78" width="420" height="520" loading="lazy" decoding="async" alt="Marinblå quiltad Dior Oblique-dunjacka med ståkrage och dragkedja">
+          <figcaption><strong>Dior</strong>Kontrollera dragkedja och ärmslut.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Beigebrun Gucci-keps med GG-mönster och böjd skärm">
+          <figcaption><strong>Gucci</strong>Be om kepsens minsta och största omkrets.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://uk.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-speedy-bandouliere-25-bag--N40575_PM2_Front%20view.jpg?wid=480" width="490" height="490" loading="lazy" decoding="async" alt="Brunrutig Louis Vuitton Speedy Bandoulière 25 med mörka handtag">
+          <figcaption><strong>Louis Vuitton</strong>Jämför väskans bredd, djup och remmens längd.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://cdn.vuahanghieu.com/unsafe/480x480/left/top/smart/filters%3Aquality%2878%29/https%3A/admin.vuahanghieu.com/upload/product/2025/05/nhan-nu-hermes-chaine-d-ancre-enchainee-ring-small-model-mau-bac-68313da40ec14-24052025103148.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Silverfärgad Hermès Chaîne d’Ancre Enchaînée-ring med sammanlänkade ankarlänkar">
+          <figcaption><strong>Hermès</strong>Mät innerdiametern på en ring som passar.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="guide section" aria-labelledby="kopguide">
+      <div class="wrap">
+        <p class="tag section-tag">Fyra korta guider</p>
+        <h2 id="kopguide">Från produktreferens till beslut</h2>
+        <div class="notes">
+          <article>
+            <h3>MyCNBox produktlänkar</h3>
+            <p>Spara originalannonsen, säljarens artikelnummer och den variant du vill ha. Om en Weidian-produktlänk eller Taobao-annons har ändrats, jämför modellkod och färg med dina anteckningar. Kontrollera lagersaldot för den valda varianten och om länken gäller ett enskilt plagg eller ett helt set.</p>
+          </article>
+          <article>
+            <h3>MyCNBox storleksguide</h3>
+            <p>Mät ett plagg som redan passar och jämför med säljarens storlekstabell i centimeter. Använd bröstvidd och rygglängd för en huvtröja, midjevidd och innerbenslängd för byxor. För sneakers är fotlängd och innersulans längd mer användbara tillsammans än en ensam EU-storlek.</p>
+          </article>
+          <article>
+            <h3>MyCNBox QC-bilder</h3>
+            <div>
+              <p>Be om en bild rakt framifrån och en närbild av den detalj du vill granska. En lagerbild i dagsljus hjälper vid färgjämförelse. Ett måttfoto med linjalen i samma plan som plagget gör det lättare att läsa av längden.</p>
+              <p>För skor kan du be att få se yttersulan och båda hälpartierna. För accessoarer är en närbild av beslag, sömmar och kanter ofta mer användbar än en ny helbild. Kontrollera eventuella returvillkor innan paketet skickas vidare.</p>
+            </div>
+          </article>
+          <article>
+            <h3>MyCNBox frakt till Sverige</h3>
+            <div>
+              <p>Håll isär varupriset, den inrikes frakten och kostnaden för internationell frakt. När du jämför offerter till exempelvis Stockholm eller Malmö, be om både faktisk paketvikt och beräknad volymvikt. Jämför kostnaderna i samma valuta, exempelvis svenska kronor.</p>
+              <p>Vid samfrakt kan en ny kartong ändra paketets mått. Jämför den slutliga fraktofferten, vilka avgifter som ingår och om du får ett spårningsnummer. Spara sedan orderbekräftelsen och paketets kollinummer tillsammans.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap faq" aria-labelledby="fraga">
+      <div>
+        <p class="tag section-tag">Snabba svar</p>
+        <h2 id="fraga">Vanliga frågor</h2>
+        <p>För dig som jämför en annons eller förbereder ett paket.</p>
+      </div>
+      <div>
+        <details open>
+          <summary>Vad är ett MyCNBox spreadsheet?</summary>
+          <p>Det är en kategoriserad samling produktreferenser för dig som jämför varor inför köp. Den här guiden är en webbsida med kategorilänkar till HipobuyFind.</p>
+        </details>
+        <details>
+          <summary>Hur ser jag om en produktlänk fortfarande gäller?</summary>
+          <p>Öppna originalannonsen och kontrollera artikelnumret, säljarens namn och om den valda storleken och färgen fortfarande går att välja.</p>
+        </details>
+        <details>
+          <summary>Vad visar QC-bilder från lagret?</summary>
+          <p>De visar synliga detaljer på varan som kommit till lagret, till exempel färg, sömmar och märkning. Be om en närbild eller ett måttfoto om en viktig detalj saknas.</p>
+        </details>
+        <details>
+          <summary>Hur uppskattar jag frakten till Sverige?</summary>
+          <p>Be om en offert för ditt svenska postnummer och jämför den debiterbara vikten, vad fraktpriset omfattar och om försändelsen kan spåras.</p>
+        </details>
+        <details>
+          <summary>Var leder kategorilänkarna?</summary>
+          <p>Varje kategorilänk öppnar motsvarande kategori hos HipobuyFind. Guiden publiceras fristående från MyCNBox.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="https://www.hipobuyfind.com">www.hipobuyfind.com</a>
+      <p>Fristående guide. Varumärkesbilderna används som visuella exempel.</p>
+    </div>
+  </footer>
+</body>
+</html>
